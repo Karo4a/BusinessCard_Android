@@ -53,26 +53,28 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainInformation(fullName: String, title: String, modifier: Modifier = Modifier) {
-    val imageSize = 200.dp
-    val imageOffset = -imageSize*0.7F
+    val imageSize = 300.dp
+    val imageOffset = -imageSize*0.5F
     Box(
         contentAlignment = Alignment.Center,
         modifier = modifier,
     ) {
-        Image(
-            painter = painterResource(R.drawable.personphoto),
-            contentDescription = null,
-            modifier = Modifier
-                .size(imageSize)
-                .offset(y = imageOffset)
-        )
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.offset(y = imageOffset)
         ) {
+            Image(
+                painter = painterResource(R.drawable.personphoto),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(imageSize)
+            )
             Text(
                 text = fullName,
-                fontSize = 60.sp,
+                lineHeight = 48.sp,
+                textAlign = TextAlign.Center,
+                fontSize = 48.sp,
             )
             Text(
                 text = title,
@@ -82,7 +84,7 @@ fun MainInformation(fullName: String, title: String, modifier: Modifier = Modifi
             )
         }
     }
-    }
+}
 
 
 @Composable

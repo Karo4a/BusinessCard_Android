@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">BusinessCard</string>
-    <string name="fullName">Sam Altman</string>
+    <string name="fullName">Иванов Тимофей</string>
     <string name="title">AI Company CEO</string>
     <string name="phone">+00 (00) 000 000</string>
     <string name="social">\@socialmediahandle</string>
